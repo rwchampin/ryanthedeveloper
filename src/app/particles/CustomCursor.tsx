@@ -11,9 +11,6 @@ export default function CustomCursor() {
     const follower = React.useRef<any>();
     const plane = React.useRef<any>();
 
-    const { scene } = useThree();
-    scene.background = new THREE.Color("black");
-    scene.fog = new THREE.Fog("black", 0, 40);
     useFrame(({pointer, raycaster, camera, viewport}) => {
         if(!viewport || !pointer) return;
         if (!follower.current || !plane.current) return;

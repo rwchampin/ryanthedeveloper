@@ -6,6 +6,7 @@ export default function Logo3d() {
   const { nodes, materials }:any = useGLTF("/black-logo.glb");
   return (
     <Center>    
+        
     <group dispose={null}>
       <mesh
         castShadow
