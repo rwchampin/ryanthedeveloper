@@ -11,6 +11,8 @@ export default function CustomCursor() {
     const follower = React.useRef<any>();
     const plane = React.useRef<any>();
 
+    const { scene } = useThree();
+
     useFrame(({pointer, raycaster, camera, viewport}) => {
         if(!viewport || !pointer) return;
         if (!follower.current || !plane.current) return;
@@ -41,7 +43,7 @@ export default function CustomCursor() {
         <mesh ref={follower}>
             <sphereGeometry args={[.01,32, 32]} />
             <meshStandardMaterial color="white" />
-            <pointLight castShadow distance={1} intensity={5} color={'#ccc'} />
+            <pointLight castShadow distance={1} intensity={3} color={'#ccc'} />
         </mesh>
 
     </group>

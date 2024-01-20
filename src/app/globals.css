@@ -26,16 +26,77 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 3;
+a:hover, button:hover, input[type="submit"]:hover {
+  cursor: pointer;
 }
+ 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.post {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.post h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.post h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.post h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.post a {
+  color: #ff3860;
+  text-decoration: none;
+  border-bottom: 1px solid #ff3860;
+  font-weight: 600;
+}
+code {
+  font-family: MyFancyCustomFont, monospace;
+  font-size: inherit;
+}
+
+/* Code in text */
+p > code,
+li > code,
+dd > code,
+td > code {
+  background: #ffeff0;
+  word-wrap: break-word;
+  box-decoration-break: clone;
+  padding: .1rem .3rem .2rem;
+  border-radius: .2rem;
+}
+pre code {
+  display: block;
+  background: none;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 0;
+}
+
+.wp-block-heading {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }

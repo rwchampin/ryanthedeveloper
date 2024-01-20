@@ -17,7 +17,7 @@ varying vec3 vColor;
 void main() {
     vColor = color; // Pass the color to the fragment shader
     vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-    gl_PointSize = size * 10.; // Set the size of the points
+    gl_PointSize = size * 0.001; // Set the size of the points
     gl_Position = projectionMatrix * mvPosition;
 }
 
@@ -67,7 +67,7 @@ export default function Particles() {
   const sizes = useMemo(() => {
     const sizes = [];
     for (let i = 0; i < PARTICLE_COUNT; i++) {
-      sizes.push(Math.random() * 2);
+      sizes.push(Math.random() * 0.01);
     }
 
     return new Float32Array(sizes);
